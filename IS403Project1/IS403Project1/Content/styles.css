@@ -7,7 +7,6 @@
     background-position: center;
     height: 20em;
     background-origin: border-box;
-    text-align: center;
 }
 
     .jumbotron h1 {
@@ -22,4 +21,16 @@
 
 #jumbotext {
     color: rgba(0, 0, 0, 0.8);
+}
+
+.jumbotron2 {
+    background-image: url('imgs/Missionaries.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 20em;
+    background-origin: border-box;
+}
+
+#center {
+    text-align:center
 }
