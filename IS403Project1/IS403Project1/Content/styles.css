@@ -1,0 +1,25 @@
+﻿body {
+}
+
+.jumbotron {
+    background-image: url('imgs/jumbotron.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 20em;
+    background-origin: border-box;
+    text-align: center;
+}
+
+    .jumbotron h1 {
+        margin-top: 2em;
+        color: white;
+        text-shadow: 3px 2px 10px black;
+    }
+
+    .jumbotron .btn {
+        margin-top: 2em;
+    }
+
+#jumbotext {
+    color: rgba(0, 0, 0, 0.8);
+}

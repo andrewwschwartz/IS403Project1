@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>MissionPage</h2>
+<div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle btn-lg" type="button" data-toggle="dropdown">
+        Missions
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+        <li>@Html.ActionLink("Brazil", "MissionPage", "Mission", new { iMishName = "Brazil" }, null)</li>
+        <li>@Html.ActionLink("New York", "MissionPage", "Mission", new { iMishName = "New York" }, null)</li>
+        <li>@Html.ActionLink("Arizona", "MissionPage", "Mission", new { iMishName = "Arizona" }, null)</li>
+    </ul>
+</div>
