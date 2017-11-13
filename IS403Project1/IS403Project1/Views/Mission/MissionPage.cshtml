@@ -81,7 +81,7 @@
             <textarea rows="6" cols="100">
             Input Your Questions Here!
         </textarea><br />
-            <input type="submit" value="Submit Answer" />
+            @Html.ActionLink("Submit", "MissionPage", "Mission", new { iMishName = @ViewBag.MishName }, null)
         </form>
     </div>
 </div>
