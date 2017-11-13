@@ -40,7 +40,7 @@ namespace IS403Project1.Controllers
 
             else if (iMishName == "Arizona")
             {
-                ViewBag.MishName = iMishName;
+                ViewBag.MishName = "Mesa " + iMishName;
                 ViewBag.PresName = "President Jenkins";
                 ViewBag.MishAddress = "123 Stapley Dr Mesa, Arizona";
                 ViewBag.Language = "English";

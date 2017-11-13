@@ -2,7 +2,11 @@
 @{
     ViewBag.Title = "MissionPage";
 }
-
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="@Url.Action("Index", "Home")">Home</a></li>
+    <li class="breadcrumb-item"><a href="@Url.Action("Index", "Mission")">Mission</a></li>
+    <li class="breadcrumb-item active">Mission Page</li>
+</ol>
 <h2>@ViewBag.MishName Mission FAQ</h2>
 <div class="row">
     <div class="col-md-6">
@@ -25,4 +29,72 @@
         <p>&emsp;@ViewBag.Religion</p>
 
     </div>
+</div>
+<div class="row">
+    <h3>FAQ's</h3>
+</div>
+<div class="panel panel-primary">
+    <div class="panel-heading panel-primary"></div>
+    <div class="panel-body">
+        <p>What are the best type of shoes for Elders/Sisters to bring?</p>
+        <a href="#hidden" data-toggle="collapse" class="btn btn-primary btn-sm">Relpy</a>
+        <form id="hidden" class="collapse">
+            <textarea rows="6" cols="100">
+            Input Your Questions Here!
+        </textarea><br />
+            <input type="submit" value="Submit Answer" />
+        </form>
+    </div>
+</div>
+<div class="panel panel-primary">
+    <div class="panel-heading panel-primary"></div>
+    <div class="panel-body">
+        <p>What are some study materials that you liked having on your mission?</p>
+        <a href="#hidden2" data-toggle="collapse" class="btn btn-primary btn-sm">Relpy</a>
+        <form id="hidden2" class="collapse">
+            <textarea rows="6" cols="100">
+            Input Your Questions Here!
+        </textarea><br />
+            <input type="submit" value="Submit Answer" />
+        </form>
+    </div>
+</div>
+<div class="panel panel-primary">
+    <div class="panel-heading panel-primary"></div>
+    <div class="panel-body">
+        <p>How long do you get to normally stay in one area for?</p>
+        <a href="#hidden3" data-toggle="collapse" class="btn btn-primary btn-sm">Relpy</a>
+        <form id="hidden3" class="collapse">
+            <textarea rows="6" cols="100">
+            Input Your Questions Here!
+        </textarea><br />
+            <input type="submit" value="Submit Answer" />
+        </form>
+    </div>
+</div>
+<div class="panel panel-primary">
+    <div class="panel-heading panel-primary"></div>
+    <div class="panel-body">
+        <p>What are some things you brought with you that helped while teaching small kids?</p>
+        <a href="#hidden4" data-toggle="collapse" class="btn btn-primary btn-sm">Relpy</a>
+        <form id="hidden4" class="collapse">
+            <textarea rows="6" cols="100">
+            Input Your Questions Here!
+        </textarea><br />
+            <input type="submit" value="Submit Answer" />
+        </form>
+    </div>
+</div>
+<div class="row">
+    <h4>Questions</h4>
+    <p>
+        Please give us some of the questions you would like to have answered! We love to hear
+        what you are wanting to know more about. Thanks!
+    </p>
+    <form>
+        <textarea rows="6" cols="100">
+            Input Your Questions Here!
+        </textarea><br />
+        <input type="submit" value="Submit Questions" />
+    </form>
 </div>
