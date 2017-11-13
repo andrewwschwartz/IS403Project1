@@ -6,6 +6,7 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -31,7 +32,27 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year</p>
+            <div class="container" id="contact">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <div class="row" id="contact-box">
+
+                        <h2 class="text-center">
+                            <a type="button" href="mailto:joshromo12@gmail.com"><span class="fa fa-envelope"></span></a>
+                            <strong>|</strong>
+                            <a type="button" href="https://www.linkedin.com/in/josueromo/" target="_blank"><span class="fa fa-linkedin-square"></span></a>
+                            <strong>|</strong>
+                            <a type="button" href="https://www.facebook.com/josue.romo.902" target="_blank"><span class="fa fa-facebook-square"></span></a>     
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </footer>
+      
+        <footer>
+            <div class="col-lg-12 text-center">
+                <p>&copy; @DateTime.Now.Year</p>
+            </div>
         </footer>
     </div>
 
