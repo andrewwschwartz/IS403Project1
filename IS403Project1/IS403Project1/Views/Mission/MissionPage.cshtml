@@ -40,9 +40,9 @@
         <a href="#hidden" data-toggle="collapse" class="btn btn-primary btn-sm">Reply</a>
         <form id="hidden" class="collapse">
             <textarea rows="6" cols="100">
-            Input Your Questions Here!
+            Input Your Response Here!
         </textarea><br />
-            <input type="submit" value="Submit Answer" />
+            @Html.ActionLink("Submit", "MissionPage", "Mission", new { iMishName = @ViewBag.MishName }, new { @class = "btn btn-primary btn-sm" })
         </form>
     </div>
 </div>
@@ -53,9 +53,9 @@
         <a href="#hidden2" data-toggle="collapse" class="btn btn-primary btn-sm">Reply</a>
         <form id="hidden2" class="collapse">
             <textarea rows="6" cols="100">
-            Input Your Questions Here!
+            Input Your Response Here!
         </textarea><br />
-            <input type="submit" value="Submit Answer" />
+            @Html.ActionLink("Submit", "MissionPage", "Mission", new { iMishName = @ViewBag.MishName }, new { @class = "btn btn-primary btn-sm" })
         </form>
     </div>
 </div>
@@ -66,9 +66,9 @@
         <a href="#hidden3" data-toggle="collapse" class="btn btn-primary btn-sm">Reply</a>
         <form id="hidden3" class="collapse">
             <textarea rows="6" cols="100">
-            Input Your Questions Here!
+            Input Your Response Here!
         </textarea><br />
-            <input type="submit" value="Submit Answer" />
+            @Html.ActionLink("Submit", "MissionPage", "Mission", new { iMishName = @ViewBag.MishName }, new { @class="btn btn-primary btn-sm"})
         </form>
     </div>
 </div>
@@ -79,9 +79,9 @@
         <a href="#hidden4" data-toggle="collapse" class="btn btn-primary btn-sm">Reply</a>
         <form id="hidden4" class="collapse">
             <textarea rows="6" cols="100">
-            Input Your Questions Here!
+            Input Your Response Here!
         </textarea><br />
-            @Html.ActionLink("Submit", "MissionPage", "Mission", new { iMishName = @ViewBag.MishName }, null)
+            @Html.ActionLink("Submit", "MissionPage", "Mission", new { iMishName = @ViewBag.MishName }, new { @class="btn btn-primary btn-sm"})
         </form>
     </div>
 </div>
@@ -95,6 +95,6 @@
         <textarea rows="6" cols="100">
             Input Your Questions Here!
         </textarea><br />
-        <input type="submit" value="Submit Questions" />
+        @Html.ActionLink("Submit", "MissionPage", "Mission", new { iMishName = @ViewBag.MishName }, new { @class = "btn btn-primary btn-sm" })
     </form>
 </div>
