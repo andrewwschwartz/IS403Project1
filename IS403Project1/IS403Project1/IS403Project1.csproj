@@ -156,7 +156,7 @@
     <Content Include="Content\imgs\Brazil.png" />
     <Content Include="Content\imgs\jumbotron.jpg" />
     <Content Include="Content\imgs\Missionaries.jpg" />
-    <Content Include="Content\imgs\New York.jpg" />
+    <Content Include="Content\imgs\NewYork.jpg" />
     <Content Include="Content\styles.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />

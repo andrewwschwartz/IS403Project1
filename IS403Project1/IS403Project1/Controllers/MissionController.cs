@@ -35,7 +35,7 @@ namespace IS403Project1.Controllers
                 ViewBag.Language = "English/Spanish";
                 ViewBag.Climate = "High Humidity, very hot in the summer and very cold in the winter. Usually snows during winter months";
                 ViewBag.Religion = "Catholicism";
-                ViewBag.Picture = "New York.jpg";
+                ViewBag.Picture = "NewYork.jpg";
             }
 
             else if (iMishName == "Arizona")
