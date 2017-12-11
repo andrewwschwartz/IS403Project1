@@ -5,6 +5,9 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using System.Data.Entity;
+using IS403Project1.Models;
+using IS403Project1.DAL;
 
 namespace IS403Project1
 {
@@ -12,6 +15,7 @@ namespace IS403Project1
     {
         protected void Application_Start()
         {
+            Database.SetInitializer<MissionContext>(null);
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

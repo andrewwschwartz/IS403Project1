@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<IS403Project1.Models.Missions>
 @{
     ViewBag.Title = "MissionPage";
 }
@@ -7,29 +7,34 @@
     <li class="breadcrumb-item"><a href="@Url.Action("Index", "Mission")">Mission</a></li>
     <li class="breadcrumb-item active">Mission Page</li>
 </ol>
-<h2>@ViewBag.MishName Mission FAQ</h2>
+
+@foreach (var item in Model)
+{
+ <h2> @(item.missionName + " ") Mission FAQ</h2>
 <div class="row">
     <div class="col-md-6">
-        <img src="~/Content/imgs/@ViewBag.Picture" class="img img-responsive img-rounded" />
+        <img src="~/Content/imgs/@item.missionFlag" class="img img-responsive img-rounded" />
     </div>
     <div class="col-md-6">
         <h4>Mission President</h4>
-        <p>&emsp;@ViewBag.PresName</p>
+        <p>&emsp;@item.missionPresidentName</p>
 
         <h4>Mission Address</h4>
-        <p>&emsp;@ViewBag.MishAddress</p>
+        <p>&emsp;@item.missionAddress</p>
 
         <h4>Mission Language</h4>
-        <p>&emsp;@ViewBag.Language</p>
+        <p>&emsp;@item.missionLanguage</p>
 
         <h4>Climate</h4>
-        <p>&emsp;@ViewBag.Climate</p>
+        <p>&emsp;@item.missionClimate</p>
 
         <h4>Main Religion</h4>
-        <p>&emsp;@ViewBag.Religion</p>
+        <p>&emsp;@item.missionDominantReligion</p>
 
     </div>
+
 </div>
+    }
 <div class="row">
     <h3>FAQ's</h3>
 </div>

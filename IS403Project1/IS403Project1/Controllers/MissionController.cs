@@ -3,53 +3,41 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using IS403Project1.Models;
+using IS403Project1.DAL; 
 
 namespace IS403Project1.Controllers
 {
     public class MissionController : Controller
     {
+        private MissionContext db = new MissionContext();
         // GET: Mission
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult MissionPage(string iMishName)
+        public ActionResult MissionPage(int mission_ID)
         {
-            if (iMishName == "Brazil")
-            {
-                ViewBag.MishName = iMishName;
-                ViewBag.PresName = "President Tanner";
-                ViewBag.MishAddress = "123 Futbol Sao Paolo, Brazil";
-                ViewBag.Language = "Portuguese";
-                ViewBag.Climate = "High humidity, varied weather according to season. No snow and stays above freezing";
-                ViewBag.Religion = "Catholicism and Evangelical";
-                ViewBag.Picture = "Brazil.png";
-            }
+            
+            /*
+            IEnumerable<MissionAndQuestions> missions = db.Database.SqlQuery<MissionAndQuestions>(
+                "SELECT Missions.mission_ID, Missions.missionName, Missions.missionPresidentName, Missions.missionAddress, Missions.missionLanguage, " +
+                "Missions.missionClimate, Missions.missionDominantReligion, Missions.missionFlag, " + 
+                "MissionQuestions.MissionQuestion_ID, MissionQuestions.question, MissionQuestions.answer, " +
+                "MissionQuestions.user_ID " +
+                "FROM Missions inner join MissionQuestions on Missions.mission_ID = MissionQuestions.mission_ID "+
+                "WHERE Missions.mission_ID = " + mission_ID);
+                */
 
-            else if (iMishName == "New York")
-            {
-                ViewBag.MishName = iMishName;
-                ViewBag.PresName = "President Calderwood";
-                ViewBag.MishAddress = "123 Manhattan New York, New York";
-                ViewBag.Language = "English/Spanish";
-                ViewBag.Climate = "High Humidity, very hot in the summer and very cold in the winter. Usually snows during winter months";
-                ViewBag.Religion = "Catholicism";
-                ViewBag.Picture = "NewYork.jpg";
-            }
+            IEnumerable<Missions> missions = db.Database.SqlQuery<Missions>(
+                "SELECT Missions.mission_ID, Missions.missionName, Missions.missionPresidentName, Missions.missionAddress, Missions.missionLanguage, " +
+                "Missions.missionClimate, Missions.missionDominantReligion, Missions.missionFlag " +
+                "FROM Missions " +
+                "WHERE Missions.mission_ID = " + mission_ID);
+               
 
-            else if (iMishName == "Arizona")
-            {
-                ViewBag.MishName = iMishName;
-                ViewBag.PresName = "President Jenkins";
-                ViewBag.MishAddress = "123 Stapley Dr Mesa, Arizona";
-                ViewBag.Language = "English";
-                ViewBag.Climate = "Super Hot and very dry";
-                ViewBag.Religion = "Mormon";
-                ViewBag.Picture = "Arizona.jpg";
-            }
-
-            return View();
+            return View(missions);
         }
     }
 }
