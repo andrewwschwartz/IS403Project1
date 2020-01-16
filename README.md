@@ -1,2 +1,2 @@
-# IS403Project1
-This is a mission site for IS 403 Project 1
+# IS403 Project 1
+ASP.Net Application for IS 403
